@@ -199,18 +199,73 @@ var data = [1322,
     1987,
     1724];
 // for loop 1
-    for (let index = 0; index < data.length; index++) {
-        var selected = data[index];
+
+getSumOfTwo(data, 2020);
+getSumOfThree(data, 2020);
+
+function getSumOfTwo(array, target) {
+    for (let index = 0; index < array.length; index++) {
+        var selected = array[index];
         // for loop 2
 
-        for (let b = 0; b < data.length; b++) {
-            var sum = data[b] + selected;
-            if(sum == 2020){
+        for (let b = 0; b < array.length; b++) {
+            var sum = array[b] + selected;
+            if (sum == target) {
 
-                console.log(data[b], selected," = 2020");
-                console.log("Multiplied: "+ data[b]*selected );
+                console.log(array[b], selected, " = ", target);
+                console.log("Multiplied: " + array[b] * selected);
             }
-            
+
         }
-        
+
     }
+}
+
+function getSumOfThree(array, target) {
+    for (let a = 0; a < array.length; a++) {
+        var A = array[a];
+        // for loop 2
+
+        for (let b = 0; b < array.length; b++) {
+            var B = array[b];
+            for (let c = 0; c < array.length; c++) {
+                const C = array[c];
+                var sum = A + B + C;
+
+                if (sum == target) {
+                    console.log(A, "+", B, "+", C, " = ", target);
+                    console.log("Multiplied: " + A * B * C);
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+// Learning React
+let createElement = React.createElement
+
+let rootElement =
+    createElement('div', {},
+        createElement('h1', {}, "Results Day One"),
+        createElement('ul', {},
+            createElement(
+                'li',
+                {}, "Answer 1: "
+
+            ),
+            createElement(
+                'li',
+                {},
+                "Answer 2: "
+            )
+        )
+    )
+
+// The `ReactDOM` variable is set by the second `<script>` tag
+// in the above HTML file
+let domNode = document.getElementById('root')
+ReactDOM.render(rootElement, domNode)
