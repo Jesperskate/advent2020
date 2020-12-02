@@ -200,8 +200,35 @@ var data = [1322,
     1724];
 // for loop 1
 
+
+// Learning React
+let createElement = React.createElement
+
+let rootElement =
+    createElement('div', {},
+        createElement('h1', {}, "Results Day One"),
+        createElement('ul', {},
+            createElement(
+                'li',
+                {id: 'answer-1'}, null
+
+            ),
+            createElement(
+                'li',
+                {id: 'answer-2'},
+                null
+            )
+        )
+    )
+
+// The `ReactDOM` variable is set by the second `<script>` tag
+// in the above HTML file
+let domNode = document.getElementById('root')
+ReactDOM.render(rootElement, domNode)
+
+
 getSumOfTwo(data, 2020);
-getSumOfThree(data, 2020);
+
 
 function getSumOfTwo(array, target) {
     for (let index = 0; index < array.length; index++) {
@@ -213,12 +240,15 @@ function getSumOfTwo(array, target) {
             if (sum == target) {
 
                 console.log(array[b], selected, " = ", target);
-                console.log("Multiplied: " + array[b] * selected);
+                var res =  array[b] * selected;
+                console.log("Multiplied: " + res);
+
             }
 
         }
 
     }
+    return res;
 }
 
 function getSumOfThree(array, target) {
@@ -234,7 +264,10 @@ function getSumOfThree(array, target) {
 
                 if (sum == target) {
                     console.log(A, "+", B, "+", C, " = ", target);
-                    console.log("Multiplied: " + A * B * C);
+                    var res = A * B * C;
+                    console.log("Multiplied: " + res);
+
+
                 }
             }
 
@@ -242,30 +275,17 @@ function getSumOfThree(array, target) {
         }
 
     }
+    return res;
 
 }
 
-// Learning React
-let createElement = React.createElement
 
-let rootElement =
-    createElement('div', {},
-        createElement('h1', {}, "Results Day One"),
-        createElement('ul', {},
-            createElement(
-                'li',
-                {}, "Answer 1: "
-
-            ),
-            createElement(
-                'li',
-                {},
-                "Answer 2: "
-            )
-        )
-    )
-
-// The `ReactDOM` variable is set by the second `<script>` tag
-// in the above HTML file
-let domNode = document.getElementById('root')
-ReactDOM.render(rootElement, domNode)
+ReactDOM.render(
+    getSumOfTwo(data, 2020),
+    document.getElementById('answer-1')
+  );
+  
+  ReactDOM.render(
+    getSumOfThree(data, 2020),
+    document.getElementById('answer-2')
+  )
