@@ -606,14 +606,16 @@ const data = [['dark indigo bags ', ' 2 clear indigo bags.'],
 ['posh green bags ', ' 1 light crimson bag, 3 vibrant cyan bags, 2 shiny brown bags, 2 vibrant magenta bags.'],
 ['muted gray bags ', ' 5 plaid chartreuse bags.']];
 
+
+
 var parsedData = [];
 
-var x = countBagsForColor(data);
-console.log(x[3]);
+countBagsForColor(data);
+
 
 
 function countBagsForColor(input) {
-
+    
     // look into each Parent Bag
     input.forEach((element, index) => {
 
@@ -646,59 +648,64 @@ function countBagsForColor(input) {
         parsedData.push([formattedParentLine, formattedChildLine])
     });
 
-    return parsedData;
 }
-
+// console.log(parsedData);
 
 // PARSING DONE
-// var parentWithFind = [];
-var find = ["shiny gold"];
 
+
+var findItems = ["shiny gold"];
+var totalParents = [];
 
 lookForBags(parsedData);
 
 function lookForBags(rules) {
-    var totals = [];
+    
     for (let i = 0; i < rules.length; i++) {
         var parent = rules[i][0];
         var child = rules[i][1];
+        // console.log(findItems);
+        if (findItems.includes(child)) {
 
+            // console.log(i+"# look for "+findItems + " in "+ child );
+            child.forEach((element, index) => {
+                // element = 1,dark olive 
+                let bagColorChild = element[1]; // dark olive 
 
-        // console.log(i+"# look for "+find + " in "+ child );
-        child.forEach((element, index) => {
-            // element = 1,dark olive 
-            let bagColorChild = element[1]; // dark olive 
+                if (findItems.includes(bagColorChild)) {
+                    // Parent bag has a bag from search array
+                    console.log("Parent bag has a bag from search array");
+                    // Add new parent bag so search array
+                    if (findItems.includes(parent) === false) {
+                        totalParents.push(parent);
+                        console.log(totalParents);
+                        findItems.push(parent);
 
-            if (find.includes(bagColorChild)) {
-                // Parent bag has a bag from search array
+                        // search with new parent bag again, reset loop
+                        // console.log("reset i: "+i);
+                        i = -1;
+                    } else {
+                        // parent containting the findItems is already in search array
+                        totalParents.push(parent);
+                    }
 
-                // Add new parent bag so search array
-                if (find.includes(parent) === false) {
-                    totals.push(parent);
-                    find.push(parent);
-
-                    // search with new parent bag again, reset loop
-                    // console.log("reset i: "+i);
-                    i = -1;
                 } else {
-                    // parent containting the find is already in search array
-                    totals.push(parent);
+                    // Parent bag has NOT a bag from search array
+                    console.log("Parent bag has NOT a bag from search array");
                 }
+                console.log("test");
+            });
 
-            } else {
-                // Parent bag has NOT a bag from search array
-            }
-        });
-        // console.log(find);
-        if (find.includes(parent)) {
+
+        } else {
             // remove the parent from search array
-            // console.log("REMOVE: " + parent);
-            find = find.filter(e => e !== parent);
+            console.log("REMOVE: " + parent + " from "+ findItems);
+            findItems = findItems.filter(e => e !== parent);
         }
 
     };
-    console.log(totals);
-    console.log(totals.length);
+    console.log(totalParents);
+    console.log(totalParents.length);
 
 }
 
