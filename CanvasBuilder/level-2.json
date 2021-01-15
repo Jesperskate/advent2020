@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {document.forms[0].submit()})
+	</script>
+</head>
+
+<body>
+	<noscript>
+		<p>
+			<strong>Note:</strong> Since your browser does not support JavaScript,
+			you must press the Continue button once to proceed.
+		</p>
+	</noscript>
+
+	<form action="https&#x3a;&#x2f;&#x2f;login.microsoftonline.com&#x2f;85daa278-99b8-4a25-a71f-837d7baa6f60&#x2f;saml2"
+		method="post">
+		<div>
+
+			<input type="hidden" name="SAMLRequest" value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c2FtbDJwOkF1dGhuUmVxdWVzdCB4bWxuczpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCIgQXNzZXJ0aW9uQ29uc3VtZXJTZXJ2aWNlVVJMPSJodHRwczovL2tuYWJ0ZXN0LndlYWx0aC10ZXN0LmF3cy5rbmFiLWludGVybmFsLmNvbS9zdWl0ZS9zYW1sL0Fzc2VydGlvbkNvbnN1bWVyIiBEZXN0aW5hdGlvbj0iaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tLzg1ZGFhMjc4LTk5YjgtNGEyNS1hNzFmLTgzN2Q3YmFhNmY2MC9zYW1sMiIgSUQ9Il9hYWU2MjdmZi02MzQ2LTQ2OTYtOTY5ZC0zY2M0ZDUxZjcxZWMiIElzc3VlSW5zdGFudD0iMjAyMS0wMS0xNVQxMDozMToyOS4yNjdaIiBQcm90b2NvbEJpbmRpbmc9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpiaW5kaW5nczpIVFRQLVBPU1QiIFByb3ZpZGVyTmFtZT0iaHR0cHM6Ly9rbmFidGVzdC53ZWFsdGgtdGVzdC5hd3Mua25hYi1pbnRlcm5hbC5jb20vc3VpdGUiIFZlcnNpb249IjIuMCI+PHNhbWwyOklzc3VlciB4bWxuczpzYW1sMj0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiIgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZvcm1hdDplbnRpdHkiPmh0dHBzOi8va25hYnRlc3Qud2VhbHRoLXRlc3QuYXdzLmtuYWItaW50ZXJuYWwuY29tL3N1aXRlPC9zYW1sMjpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvPgo8ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPgo8ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIvPgo8ZHM6UmVmZXJlbmNlIFVSST0iI19hYWU2MjdmZi02MzQ2LTQ2OTYtOTY5ZC0zY2M0ZDUxZjcxZWMiPgo8ZHM6VHJhbnNmb3Jtcz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIi8+CjxkczpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiLz4KPC9kczpUcmFuc2Zvcm1zPgo8ZHM6RGlnZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxlbmMjc2hhMjU2Ii8+CjxkczpEaWdlc3RWYWx1ZT5ZYnZreCtySWs5dnhQSXV6ZldoZUxmV2hSRlZvZFJPWHdRdEFSZnR5aU5ZPTwvZHM6RGlnZXN0VmFsdWU+CjwvZHM6UmVmZXJlbmNlPgo8L2RzOlNpZ25lZEluZm8+CjxkczpTaWduYXR1cmVWYWx1ZT4KSUlEWmo3ZjJNUnlraDdiUFV6SU9JbGpid2RvZjJWRnk3SXpNVWltSDN1RGtrNnlxaXlObDFiNWJKb0JLTVl6YmNOWTNFL0U3MjY3YQoxVTVvV2prZkNKalB5MTMvMjhIZGFOQkpHckQ4UHpWeUNWT1RNcWVJdjZQeVNrMUhrWUJ5RXFzWmg2amlFN1c4bWVabHVBam43NEFSCi9SVGkrbCs4RUkyNXIzdHJlSHlKbGk3d1REZjNzai9qbFJTcVFFNWFRM29rdy9BVkVaSk9uL3hhdENPNHVKcHBpRkRJNm5QTjBqVmwKRTY3eTlveWdlbUxjUitwRSt5clQvZ3pYRWFxVm1nQUhqWE1zcy9OdXhmREZzUHhhc2hHMENqNUVsaXBld3RMY1o2a0NacTNxak5XSApnczNDWmEzM3A3Wkh5MlkzZVpaOXlRRDlDeXIxTkd1eFB6Z00rUT09CjwvZHM6U2lnbmF0dXJlVmFsdWU+CjwvZHM6U2lnbmF0dXJlPjwvc2FtbDJwOkF1dGhuUmVxdWVzdD4="/>
+
+            </div>
+			<noscript>
+				<div>
+					<input type="submit" value="Continue"/>
+                </div>
+			</noscript>
+	</form>
+</body>
+
+</html>
