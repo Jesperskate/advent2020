@@ -1,6 +1,10 @@
 <html> 
   <head>
-    <style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map Editor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
       .bottom-fixed{
           position: fixed;
           bottom: 0px;
@@ -17,12 +21,23 @@
   </head>
   <body>
     <div class="top-fixed">
-      <select id="tiles">
-      </select>
+      <div class="select">
+        <select id="tiles">
+        </select>
+      </div>
+      
+
+
     </div>
     <canvas></canvas>
     <div class="bottom-fixed">
-      <button onclick="save()">Export map (.json)</button>
+      <button class="button" onclick="save()">
+        <span class="icon is-small">
+          <i class="fa fa-check fa-2x"></i>
+        </span>
+        <span>
+          map (.json)
+        </span> </button>
     </div>
   </body>
   
